@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar" id="navbar">
+      <div class="logo">
+        <div class="logoImg">
+          <div style="cursor:
+          pointer;">
+            <a href="../index.html"><img src="../img/goldVersion.png" alt="" width="65"></a>
+          </div>
+          <div class="cyberLogo" style="cursor:
+          pointer;">
+            <a href="../index.html">Cyber Royal</a>
+          </div>
+        </div>
+
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars" id="open-icon"></i>
+          <i class="fas fa-times" id="close-icon" style="display: none;"></i>
+        </div>
+      </div>
+
+
+
+      <nav class="mynav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about_us.html">About Us</a></li>
+          <li>
+            <a href="#">Service</a>
+            <ul class="dropdown">
+              <li class="liMenu"><a href="../our_service.html">Our Service</a></li>
+              <li><a class="ser" href="../details_View/service_details.html">Service Details</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Page</a>
+            <ul class="dropdown">
+              <li><a href="../pricing_plan.html">Pricing plan</a></li>
+              <li><a href="../our_team.html">Our team</a></li>
+              <li><a href="../Our_FAQS.html">Our FAQS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="qq" href="#">Shop</a>
+            <ul class="dropdown">
+              <li><a href="../our_shop.html">Our Shop</a></li>
+              <li><a class="qq" href="shop_details.html">Shop Details</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+            <ul class="dropdown">
+              <li><a href="../Blog.html">Our Blog</a></li>
+              <li><a href="../Blog3.html">Blog Details</a></li>
+            </ul>
+          </li>
+          <li><a href="../contactUs.html">Contact Us</a></li>
+          <div class="cartbtndiv" style="margin-top: 12px;">
+            <button class="addcartbtn"><img src="../img/add-cart.png" alt="" width="25px"
+                style="background-color: black;"></button>
+            <div class="count">
+              <span id="cart-count">0</span>
+            </div>
+            <div id="cart-container" class="container-cart2"></div>
+          </div>
+        </ul>
+      </nav>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="Allitems">
+
+    <div class="threeimgs">
+      <img src="../shop-imgs/mouse11.png" alt="" width="142px" class="borderimg" onclick="changeImage(this)">
+      <img src="../shop-imgs/mouse22.png" alt="" width="142px" class="borderimg" onclick="changeImage(this)">
+      <img src="../shop-imgs/mousse33.png" alt="" width="142px" class="borderimg" onclick="changeImage(this)">
+    </div>
+    <div class="mainimg">
+      <img id="mainProductImage" src="../img/12cd6b9886a38e4c6851e70ce8280e4f-removebg-preview.png" alt="" height="470px" class="borderimg"
+        width="450px">
+    </div>
+
+    <div class="details" data-id="1">
+      <p class="stars" style="color: #FFD700;">★★★★★ (0 out of 5)</p>
+      <div class="product-name2">Razer DeathAdder Essential</div>
+      <div style="margin-bottom: 15px;">
+        <span class="price2" id="priceDisplay" data-price="399.00">399.00 </span>
+        <span style="color: #FFD700; font-weight: bold;font-size: 22px;">MAD</span>
+      </div>
+      <p style="color: #ccc;" class="descreption">
+        The Razer DeathAdder Essential is a right-handed gaming mouse renowned for its ergonomic form and durability. It features a true 6 400 DPI optical sensor, five programmable "Hyperesponse" buttons, and mechanical switches rated for up to 10 million clicks – ideal for both gaming sessions and productivity 
+      </p>
+      <div class="actions">
+        <div class="qty" style="margin-bottom: 20px;">
+          <button class="qtybtn" onclick="decreaseQty()"><img src="../shop-imgs/min.png" width="10px" alt=""></button>
+          <span id="qtyValue" style="font-size: 1.1rem;font-weight: bold;color: #FFD700; margin: 0 5px 0 5px;">1</span>
+          <button class="qtybtn" onclick="increaseQty()"><img src="../shop-imgs/plus.png" width="10px" alt=""></button>
+        </div>
+        <div style="display: flex;gap: 100px;">
+          <div class="addcart2">
+            <div>
+              <img src="../img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+            </div>
+            <div>
+              <a class="addtocart" href="">Add to cart</a>
+            </div>
+
+          </div>
+          <div class="addcart2">
+            <div>
+              <img src="../img/shopping-bag (1).png" alt="" width="25px" style="margin-left: 3px;">
+            </div>
+            <div>
+             <a class="addtocart2 order-now"
+             href="#"
+             data-name="Razer DeathAdder Essential"
+             data-price="399.00"
+             data-img="../img/12cd6b9886a38e4c6851e70ce8280e4f-removebg-preview.png">Order Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="category">
+        <div style="display: flex; align-items:center;gap: 10px;margin-bottom: 10px; margin-top: 15px;">
+          <div>
+            <img src="../shop-imgs/categorization.png" width="25px" alt="">
+          </div>
+          <div>
+            <p><span style="font-weight: bold;">Category:</span> Mouse</p>
+          </div>
+
+        </div>
+        <div style="display: flex; align-items:center ;gap: 10px;">
+          <div>
+            <img src="../shop-imgs/price-tag (1).png" alt="" width="25px">
+          </div>
+          <div>
+            <p><span style="font-weight: bold;">Tags:</span> Razer, Gaming Mouse, Wired, Ergonomic, 6400 DPI, Mechanical Switches, Programmable Buttons, Optical Sensor</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+<div id="paymentOverlay">
+  <div id="paymentPage">
+    <button id="closePayment">X</button>
+    <h2 style="color: #FFD700;">Complete Your Order</h2>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <div>
+        <img id="paymentImage" src="" width="200px" />
+      </div>
+      <div style="flex: 1;">
+        <h3 id="paymentName"></h3>
+        <p style="font-size: 18px;">Price: <span id="paymentPrice" style="color: #FFD700;"></span> MAD</p>
+        <form id="paymentForm">
+          <input type="text" placeholder="Cardholder Name" required>
+          <input type="text" placeholder="Card Number" required>
+          <input type="text" placeholder="MM/YY" required>
+          <input type="text" placeholder="CVC" required>
+          <button type="submit">Pay Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="related">
+    <div>
+      <img src="../shop-imgs/box.png" alt="" width="100px">
+    </div>
+    <div>
+      <h1>Related Products</h1>
+    </div>
+
+  </div>
+
+
+ <div class="allrelated">
+    <div class="related1">
+      <a href="product14.html"><img src="../img/earbuds1.png" alt="" width="250px"></a>
+      <div class="price55">
+        399 <span style="color: #FFD700;">MAD</span>
+      </div>
+      <div class="relatedname">Samsung Galaxy Buds2 Pro</div>
+
+    </div>
+
+    <div class="related1">
+      <a href="product3.html"><img src="../img/minibleutouth-removebg-preview.png" alt="" width="250px"></a>
+      <div class="price55">
+        699 <span style="color: #FFD700;">MAD</span>
+      </div>
+      <div class="relatedname">Echo Dot (4th Gen)</div>
+
+    </div>
+    <div class="related1">
+      <a href="product5.html"><img src="../img/jpl.png" alt="" width="250px"></a>
+      <div class="price55">
+        499 <span style="color: #FFD700;">MAD</span>
+      </div>
+      <div class="relatedname">JBL Flip Essential</div>
+
+    </div>
+    <div class="related1 product" data-id="2">
+      <a href="product24.html"><img src="../img/macbook.png" alt="" width="250px"></a>
+      <div class="price55">14900 <span style="color: #FFD700;">MAD</span></div>
+      <div class="relatedname">MacBook Air M1 2020</div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footerheight">
+    <div class="footerElement">
+      <div class="Adresse" style="margin-top: 80px;">
+        <div class="numberF">
+          <div>
+            <img src="../img/telephone (2).png" width="25px" alt="">
+          </div>
+          <div>
+            +212 663822049
+          </div>
+
+        </div>
+        <div class="numberF">
+          <div>
+            <img src="../img/gmail (3).png" width="25px" alt="">
+          </div>
+          <div>
+            cyberroyal@gmail.com
+          </div>
+
+        </div>
+        <div>
+          <div class="social-icons " style=" margin-left: 25px;">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="Adresse">
+        <span class="QuickS">Quick Links</span>
+        <ul class="linksA">
+          <li> <a class="aFooter" href="../about_us.html">About Us</a> </li>
+          <li> <a class="aFooter" href="../details_View/service_details.html">Service Details</a> </li>
+          <li> <a class="aFooter" href="../Blog.html">Blog Us</a></li>
+          <li><a class="aFooter" href="../our_shop.html">Our Shop</a> </li>
+          <li> <a class="aFooter" href="../contactUs.html">Contact Us</a> </li>
+        </ul>
+      </div>
+
+
+      <div class="Adresse">
+        <span class="QuickS">Our services</span>
+        <ul class="linksA">
+          <li><a class="aFooter" href="../details_View/Continuous_Monitoring.html">Continuous Monitoring</a> </li>
+          <li><a class="aFooter" href="../details_View/service_details.html">Structural Weaknesses</a> </li>
+          <li><a class="aFooter" href="../details_View/widening_Attack.html">Widening Attack Surface</a> </li>
+          <li><a class="aFooter" href="../details_View/client_protection.html">Client Protection</a> </li>
+          <li><a class="aFooter" href="../details_View/Scheduled_Backups.html">Scheduled Backups</a> </li>
+        </ul>
+      </div>
+
+      <div class="Adresse" style="margin-top: 80px;">
+        <div class="emaildiv">
+          <img src="../img/email (1).png" alt="" width="40px" class="footerimg">
+          <input type="email" id="email" name="email" class="emailInput" placeholder="Enter your email" required>
+        </div>
+        <div class="subscribeDiv">
+          <button class="subscribe" id="subscribeBtn">Subscribe Now</button>
+        </div>
+        <div class="alertMsg">
+          Thank you 💕!, Your email has been sent.
+        </div>
+      </div>
+
+    </div>
+    <div class="Copyright cop2">
+      Copyright ©2025 Design By Zouheir Fakir
+    </div>
+  </footer>
+
+
+  <script src="../js/script.js"></script>
+  <script src="../js/script2.js"></script>
+  <script src="../js/script3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
