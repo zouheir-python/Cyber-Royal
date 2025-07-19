@@ -693,36 +693,39 @@ nav {
 
   .container-cart2 {
 
-    position: absolute !important;
+   position: absolute !important;
     top: 136px !important;
-    right: 111px !important;
+    right: -8px !important;
     background: #FFD700 !important;
     border: 0 !important;
-    z-index: 1000 !important;
-    width: 419px !important;
+    z-index: 1002 !important;
+    width: 517px !important;
     height: 269px !important;
     overflow-y: auto !important;
   }
-.cart-item{
-  
-  position: relative;
-  right: -25px;
-  width: 755px !important;
-  
-}
-  .container-cart{
 
-   position: absolute !important;
-        top: 136px !important;
-        right: -11px !important;
-        background: #FFD700 !important;
-        border: 0 !important;
-        z-index: 1002 !important;
-        width: 775px !important;
-        height: 269px !important;
-        overflow-y: auto !important;
+  .cart-item {
+
+   position: relative;
+        right: -35px;
+        width: 483px !important;
+
   }
-  #paymentPage{
+
+  .container-cart {
+
+    position: absolute !important;
+    top: 136px !important;
+    right: -8px !important;
+    background: #FFD700 !important;
+    border: 0 !important;
+    z-index: 1002 !important;
+    width: 386px !important;
+    height: 269px !important;
+    overflow-y: auto !important;
+  }
+
+  #paymentPage {
     left: 0 !important;
   }
 }
