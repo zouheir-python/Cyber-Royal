@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar" id="navbar">
+      <div class="logo">
+        <div class="logoImg">
+          <div style="cursor:
+          pointer;">
+            <a href="index.html"><img src="img/goldVersion.png" alt="" width="65"></a>
+          </div>
+          <div class="cyberLogo" style="cursor:
+          pointer;">
+            <a href="index.html">Cyber Royal</a>
+          </div>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars" id="open-icon"></i>
+          <i class="fas fa-times" id="close-icon" style="display: none;"></i>
+        </div>
+      </div>
+
+
+
+      <nav class="mynav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li>
+            <a href="#">Service</a>
+            <ul class="dropdown">
+              <li class="liMenu"><a href="our_service.html">Our Service</a></li>
+              <li><a class="ser" href="details_View/service_details.html">Service Details</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Page</a>
+            <ul class="dropdown">
+              <li><a href="pricing_plan.html">Pricing plan</a></li>
+              <li><a href="our_team.html">Our team</a></li>
+              <li><a href="Our_FAQS.html">Our FAQS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="qq" href="#">Shop</a>
+            <ul class="dropdown">
+              <li><a class="qq" href="our_shop.html">Our Shop</a></li>
+              <li><a href="shop_details/shop_details.html">Shop Details</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+            <ul class="dropdown">
+              <li><a href="Blog.html">Our Blog</a></li>
+              <li><a href="Blog3.html">Blog Details</a></li>
+            </ul>
+          </li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+
+          <div class="cartbtndiv" style="margin-top: 12px;">
+            <button class="addcartbtn"><img src="img/add-cart.png" alt="" width="25px"
+                style="background-color: black;"></button>
+            <div class="count">
+              <span id="cart-count">0</span>
+            </div>
+            <div id="cart-container" class="container-cart"></div>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+    </div>
+  </header>
+  <section class="faq-section2">
+    <div class="PricingDivee2">
+      <div>
+        <img src="img/shopping-cart.png" alt="" width="70px">
+      </div>
+      <div>
+        <h1>Shop</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="shopProducts">
+    <div class="row1">
+
+      <div class="product" data-id="1">
+        <a href="shop_details/product1.html"><img src="img/wireless-removebg-preview.png" alt="" width="255px"></a>
+        <div class="price55">
+          499 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Anker Wireless Charger</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="2">
+        <a href="shop_details/product2.html"><img src="img/earbuds-removebg-preview.png" alt="" width="255px"></a>
+        <div class="price55">
+          299 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Xiaomi Redmi Buds 3 Lite</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="3">
+        <a href="shop_details/product3.html"><img src="img/minibleutouth-removebg-preview.png" alt="" width="255px"></a>
+        <div class="price55">
+          699 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Echo Dot (4th Gen)</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="4">
+        <a href="shop_details/product4.html"><img
+            src="img//409093096_6437d0df-f346-4160-a58d-feaef0c60d4e-removebg-preview.png" alt="" width="255px"></a>
+        <div class="price55">
+          999 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Sony WH-CH510 </div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row1">
+
+      <div class="product" data-id="5">
+        <a href="shop_details/product5.html"><img src="img/jpl.png" alt="" width="255px"></a>
+        <div class="price55">
+          499 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name"> JBL Flip Essential</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="6">
+        <a href="shop_details/product6.html"><img src="img/watch2-removebg-preview.png" alt="" width="255px"
+            height="255px"></a>
+        <div class="price55">
+          6199 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Apple Watch Series 7/8 replica</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="7">
+        <a href="shop_details/product7.html"><img src="img/ee9499d2fd134a69aee8f496238752f8-removebg-preview.png" alt=""
+            width="255px"></a>
+        <div class="price55">
+          399 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Apple AirPods 2 or replicas</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="8">
+        <a href="shop_details/product8.html"><img src="img/8c8a34c234601a8f04afa76c8f432bd8-removebg-preview.png" alt=""
+            width="255px" height="255px"></a>
+        <div class="price55">
+          499 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name"> Logitech MX Master 3</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row1">
+
+      <div class="product" data-id="9">
+        <a href="shop_details/product9.html"><img src="img/b8b45345e0c3578b75a9be4356b6464d-removebg-preview.png" alt=""
+            width="255px"></a>
+        <div class="price55">
+          299 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name"> SanDisk Dual Drive USB</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="10">
+        <a href="shop_details/product10.html"><img src="img/12cd6b9886a38e4c6851e70ce8280e4f-removebg-preview.png"
+            alt="" width="255px"></a>
+        <div class="price55">
+          399 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name"> Razer DeathAdder Essential</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="11">
+        <a href="shop_details/product11.html"><img src="img/a339ee0583092bb94c0dce8a99bcf3af-removebg-preview.png"
+            alt="" width="255px"></a>
+        <div class="price55">
+          699 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Apple Magic Keyboard</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="12">
+        <a href="shop_details/product12.html"><img src="img/588f77db5c87555417a16f6d16278a63-removebg-preview.png"
+            alt="" width="255px"></a>
+        <div class="price55">
+          5499 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Series 8 or 9 (Apple Watch)</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row1">
+
+      <div class="product" data-id="13">
+        <a href="shop_details/product13.html"><img src="img/headphones1.png" alt="" width="255px"></a>
+        <div class="price55">
+          799 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Bose QuietComfort 45</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="14">
+        <a href="shop_details/product14.html"><img src="img/earbuds1.png" alt="" width="255px"></a>
+        <div class="price55">
+          399 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Samsung Galaxy Buds2 Pro</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="15">
+        <a href="shop_details/product15.html"><img src="img/logiteck.png" alt="" width="255px"></a>
+        <div class="price55">
+          3199 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Logitech C920</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="16">
+        <a href="shop_details/product16.html"><img src="img/miniprinter.png" alt="" width="255px"></a>
+        <div class="price55">
+          499 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Mini Portable Printer</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row1">
+
+      <div class="product" data-id="17">
+        <a href="shop_details/product17.html"><img src="img/phonecontroller (2).png" alt="" width="255px"></a>
+        <div class="price55">
+          699 <span style="color: #FFD700;">MAD</span>
+        </div>
+        <div class="product-name">Mobile Game Controller</div>
+        <div class="addcart">
+          <div>
+            <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+          </div>
+          <div>
+            <a class="addtocart" href="">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="product" data-id="18">
+        <a href="shop_details/product18.html"><img src="img/raisen5.png" alt="" width="255px">
+          <div class="price55">
+        </a>
+        2200 <span style="color: #FFD700;">MAD</span>
+      </div>
+      <div class="product-name">AMD Ryzen 5 5600G</div>
+      <div class="addcart">
+        <div>
+          <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+        </div>
+        <div>
+          <a class="addtocart" href="">Add to cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="product" data-id="19">
+      <a href="shop_details/product19.html"><img src="img/ssd.png" alt="" width="255px">
+        <div class="price55">
+      </a>
+      850 <span style="color: #FFD700;">MAD</span>
+    </div>
+    <div class="product-name">Kingston A400 480GB SSD</div>
+    <div class="addcart">
+      <div>
+        <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+      </div>
+      <div>
+        <a class="addtocart" href="">Add to cart</a>
+      </div>
+    </div>
+  </div>
+  <div class="product" data-id="20">
+    <a href="shop_details/product20.html"><img src="img/router.png" alt="" width="255px">
+      <div class="price55">
+    </a>
+    1150 <span style="color: #FFD700;">MAD</span>
+  </div>
+  <div class="product-name">TP-Link Archer AX10</div>
+  <div class="addcart">
+    <div>
+      <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+    </div>
+    <div>
+      <a class="addtocart" href="">Add to cart</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+  <div class="row1">
+
+    <div class="product" data-id="21">
+      <a href="shop_details/product21.html"><img src="img/urgeen.png" alt="" width="255px">
+        <div class="price55">
+      </a>
+      550 <span style="color: #FFD700;">MAD</span>
+    </div>
+    <div class="product-name">Ugreen 7-in-1 USB-C Hub</div>
+    <div class="addcart">
+      <div>
+        <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+      </div>
+      <div>
+        <a class="addtocart" href="">Add to cart</a>
+      </div>
+    </div>
+  </div>
+  <div class="product" data-id="22">
+    <a href="shop_details/product22.html"> <img src="img/External SSD Samsung T7 1TB.png" alt="" width="255px"></a>
+    <div class="price55">
+      1300 <span style="color: #FFD700;">MAD</span>
+    </div>
+    <div class="product-name">External SSD Samsung T7 1TB</div>
+    <div class="addcart">
+      <div>
+        <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+      </div>
+      <div>
+        <a class="addtocart" href="">Add to cart</a>
+      </div>
+    </div>
+  </div>
+  <div class="product" data-id="23">
+    <a href="shop_details/product23.html"><img src="img/Corsair Vengeance 32GB Kit.png" alt="" width="255px"></a>
+    <div class="price55">
+      2500 <span style="color: #FFD700;">MAD</span>
+    </div>
+    <div class="product-name">Corsair Vengeance 32GB Kit</div>
+    <div class="addcart">
+      <div>
+        <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+      </div>
+      <div>
+        <a class="addtocart" href="">Add to cart</a>
+      </div>
+    </div>
+  </div>
+  <div class="product" data-id="24">
+    <a href="shop_details/product24.html"><img src="img/macbook.png" alt="" width="255px">
+      <div class="price55">
+    </a>
+    14900 <span style="color: #FFD700;">MAD</span>
+  </div>
+  <div class="product-name">MacBook Air M1 2020 (13-inch)</div>
+  <div class="addcart">
+    <div>
+      <img src="img/add-to-cart (1).png" alt="" width="25px" style="margin-left: 3px;">
+    </div>
+    <div>
+      <a class="addtocart" href="">Add to cart</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+  <footer>
+    <div class="footerElement">
+      <div class="Adresse" style="margin-top: 80px;">
+        <div class="numberF">
+          <div>
+            <img src="img/telephone (2).png" width="25px" alt="">
+          </div>
+          <div>
+            +212 663822049
+          </div>
+
+        </div>
+        <div class="numberF">
+          <div>
+            <img src="img/gmail (3).png" width="25px" alt="">
+          </div>
+          <div>
+            cyberroyal@gmail.com
+          </div>
+
+        </div>
+        <div>
+          <div class="social-icons " style=" margin-left: 25px;">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="Adresse">
+        <span class="QuickS">Quick Links</span>
+        <ul class="linksA">
+          <li> <a class="aFooter" href="about_us.html">About Us</a> </li>
+          <li> <a class="aFooter" href="details_View/service_details.html">Service Details</a> </li>
+          <li> <a class="aFooter" href="Blog.html">Blog Us</a></li>
+          <li><a class="aFooter" href="our_shop.html">Our Shop</a> </li>
+          <li> <a class="aFooter" href="contactUs.html">Contact Us</a> </li>
+        </ul>
+      </div>
+
+
+      <div class="Adresse">
+        <span class="QuickS">Our services</span>
+        <ul class="linksA">
+          <li><a class="aFooter" href="details_View/Continuous_Monitoring.html">Continuous Monitoring</a> </li>
+          <li><a class="aFooter" href="details_View/service_details.html">Structural Weaknesses</a> </li>
+          <li><a class="aFooter" href="details_View/widening_Attack.html">Widening Attack Surface</a> </li>
+          <li><a class="aFooter" href="details_View/client_protection.html">Client Protection</a> </li>
+          <li><a class="aFooter" href="details_View/Scheduled_Backups.html">Scheduled Backups</a> </li>
+        </ul>
+      </div>
+
+      <div class="Adresse" style="margin-top: 80px;">
+        <div class="emaildiv">
+          <img src="img/email (1).png" alt="" width="40px">
+          <input type="email" id="email" name="email" class="emailInput" placeholder="Enter your email" required>
+        </div>
+        <div class="subscribeDiv">
+          <button class="subscribe" id="subscribeBtn">Subscribe Now</button>
+        </div>
+        <div class="alertMsg">
+          Thank you 💕!, Your email has been sent.
+        </div>
+      </div>
+
+    </div>
+    <div class="Copyright">
+      Copyright ©2025 Design By Zouheir Fakir
+    </div>
+  </footer>
+  <script src="js/script2.js"></script>
+  <script>function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      const openIcon = document.getElementById("open-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      navbar.classList.toggle("active");
+
+      const isActive = navbar.classList.contains("active");
+
+      openIcon.style.display = isActive ? "none" : "inline";
+      closeIcon.style.display = isActive ? "inline" : "none";
+    }</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script3.js"></script>
+</body>
+
+</html>
