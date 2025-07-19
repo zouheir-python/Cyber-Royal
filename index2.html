@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Navbar with Payment Popup</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Cuprum', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Pricing plans container */
+    .allprices {
+      display: flex;
+      justify-content: space-around;
+      margin: 70px 20px 300px 20px;
+      gap: 20px;
+    }
+
+    .price {
+      width: 30%;
+      background-color: #000000;
+      border: 2px solid #FFD700;
+      border-radius: 22px;
+      display: flex;
+      flex-direction: column;
+      padding: 15px 20px;
+      box-sizing: border-box;
+    }
+
+    .Mounth {
+      font-size: 20px;
+      color: #FFD700;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .priceMad {
+      font-size: 35px;
+      font-weight: 700;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .priceP {
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .getbtn {
+      background-color: #FFD700;
+      border: none;
+      padding: 12px;
+      font-weight: 700;
+      color: #000;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-bottom: 15px;
+    }
+
+    .getbtn:hover {
+      background-color: #e6c200;
+    }
+
+    .personal {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .ulprice {
+      list-style: none;
+      padding: 0;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .ulprice li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .check-price {
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    /* Payment overlay and form */
+    .payment-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .payment-box {
+      background-color: #070606;
+      padding: 40px 60px;
+      border-radius: 10px;
+      width: 400px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      color: #fff;
+      box-sizing: border-box;
+      font-weight: 500;
+    }
+
+    .payment-box h5 {
+      margin-bottom: 25px;
+      color: #FFD700;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .payment-box label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    .payment-box input[type="text"],
+    .payment-box input[type="email"],
+    .payment-box input[type="file"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .payment-box button[type="submit"] {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #FFD700;
+      border: none;
+      border-radius: 5px;
+      color: #000;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .payment-box button[type="submit"]:hover {
+      background-color: #e6c200;
+    }
+
+    .close-btn {
+      background: #FFD700;
+      border: none;
+      color: #000;
+      font-size: 20px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: 700;
+      line-height: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="allprices">
+    <!-- Plan 1 -->
+    <div class="price">
+      <span class="Mounth">Monthly</span>
+      <span class="priceMad">4999 MAD</span>
+      <p class="priceP">
+        Nam libero tempore soluta nobis eligendi optio cumque minus quod maxime
+      </p>
+      <button class="getbtn" onclick="showPayment('Basic Plan', 4999)">Get started now</button>
+      <span class="personal">Personal</span>
+      <ul class="ulprice">
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Encrypted
+          Transactions</li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> 24/7 Support Service
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Automated Daily Backup
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Free Hardware Included
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Scan Every 12 Hours
+        </li>
+      </ul>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="price">
+      <span class="Mounth">Monthly</span>
+      <span class="priceMad">10990 MAD</span>
+      <p class="priceP">
+        Nam libero tempore soluta nobis eligendi optio cumque minus quod maxime
+      </p>
+      <button class="getbtn" onclick="showPayment('Standard Plan', 10990)">Get started now</button>
+      <span class="personal">Personal</span>
+      <ul class="ulprice">
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Encrypted
+          Transactions</li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> 24/7 Support Service
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Automated Daily Backup
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Free Hardware Included
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Scan Every 12 Hours
+        </li>
+      </ul>
+    </div>
+
+    <!-- Plan 3 -->
+    <div class="price">
+      <span class="Mounth">Monthly</span>
+      <span class="priceMad">15990 MAD</span>
+      <p class="priceP">
+        Nam libero tempore soluta nobis eligendi optio cumque minus quod maxime
+      </p>
+      <button class="getbtn" onclick="showPayment('Premium Plan', 15990)">Get started now</button>
+      <span class="personal">Personal</span>
+      <ul class="ulprice">
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Encrypted
+          Transactions</li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> 24/7 Support Service
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Automated Daily Backup
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Free Hardware Included
+        </li>
+        <li><span class="check-price"><img width="15" src="img/check (1).png" alt="" /></span> Scan Every 12 Hours
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Payment Overlay -->
+  <div class="payment-overlay" id="paymentOverlay">
+    <form class="payment-box" onsubmit="handleSubmit(event)">
+      <button type="button" class="close-btn" onclick="closePayment()">×</button>
+      <h5 id="planTitle">Payment</h5>
+
+      <label><i class="fa-solid fa-user"></i> Full Name:</label>
+      <input type="text" required />
+
+      <label><i class="fa-solid fa-envelope"></i> Email:</label>
+      <input type="email" id="paymentEmail" required />
+
+      <label><i class="fa-solid fa-phone"></i> Phone:</label>
+      <input type="text" required />
+
+      <label><i class="fa-solid fa-file-arrow-up"></i> Upload a File:</label>
+      <input type="file" />
+
+      <label><i class="fa-solid fa-credit-card"></i> Card Number:</label>
+      <input type="text" maxlength="16" placeholder="1234 5678 9012 3456" required />
+
+      <label><i class="fa-solid fa-calendar-days"></i> Expiry Date:</label>
+      <input type="text" placeholder="MM/YY" required />
+
+      <label><i class="fa-solid fa-lock"></i> CVV:</label>
+      <input type="text" maxlength="3" placeholder="123" required />
+
+      <button type="submit" id="subscribeBtn2">Confirm and Pay</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    function showPayment(planName, price) {
+      document.getElementById("planTitle").innerText = `Payment for ${planName} - ${price} MAD`;
+      document.getElementById("paymentOverlay").style.display = "flex";
+      document.body.style.overflow = "hidden"; // prevent background scroll
+    }
+
+    function closePayment() {
+      document.getElementById("paymentOverlay").style.display = "none";
+      document.body.style.overflow = "auto"; // restore scroll
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const emailInput = document.getElementById("paymentEmail");
+      const email = emailInput.value;
+
+      if (!email.includes("@") || !email.includes(".com")) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Invalid Email',
+          text: 'Please enter a valid email address!',
+        });
+        return;
+      }
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Thank you 💕!',
+        text: 'Your payment was successful.',
+        showConfirmButton: false,
+        timer: 3000
+      });
+
+      closePayment();
+
+      // Optionally reset the form here:
+      event.target.reset();
+    }
+  </script>
+</body>
+
+</html>
